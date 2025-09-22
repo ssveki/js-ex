@@ -7,6 +7,7 @@ const age = Number(prompt("Введите возраст: "));
 console.log(`Привет, ${name} ${surname}! Тебе ${age} лет.`);
 */
 
+
 /* Уровень 2
 
 const num = prompt("Введите число: ");
@@ -21,6 +22,9 @@ if (isNaN(num)) {
     }
 }
 */
+
+
+/* Уровень 3 */
 
 const name = prompt("Введите имя: ");
 const age = Number(prompt("Введите возраст: "));
