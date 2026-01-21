@@ -3,11 +3,11 @@ const myName = "Вероника";
 const programmingLanguage = "JavaScript";
 const courseCreatorName ="Никаиты Михайловича";
 const reasonText = "думаю, что буду работать в этой сфере в будущем";
-const numberOfMonth = "3";
+const numberOfMonth = "7";
 
 let myInfoText = (`Всем привет! Меня зовут ${myName}. Сейчас я изучаю язык программирования ${programmingLanguage} на курсе по ${programmingLanguage} y ${courseCreatorName}.
 
-Я хочу стать веб-разработчиком, потому что ${reasonText}. До этого я изучал(а) ${programmingLanguage} ${numberOfMonth} месяца. Я уверен(а), что пройду данный курс до конца!`)
+Я хочу стать веб-разработчиком, потому что ${reasonText}. До этого я изучал(а) ${programmingLanguage} ${numberOfMonth} месяцев. Я уверен(а), что пройду данный курс до конца!`)
 
 myInfoText = myInfoText.replaceAll(programmingLanguage, programmingLanguage.toUpperCase());
 
