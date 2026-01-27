@@ -1,4 +1,4 @@
-/* Задания №1, 2
+/* Задания №1, 2 */
 const myName = "Вероника";
 const programmingLanguage = "JavaScript";
 const courseCreatorName ="Никаиты Михайловича";
@@ -14,8 +14,8 @@ myInfoText = myInfoText.replaceAll(programmingLanguage, programmingLanguage.toUp
 console.log(myInfoText)
 console.log(myInfoText.length)
 console.log(myInfoText.charAt(0))
-console.log(myInfoText.charAt(308))
-*/
+let lastChar = myInfoText.length - 1;
+console.log(myInfoText.charAt(lastChar))
 
 
 /* Задание №3, 4
@@ -40,7 +40,7 @@ userString = userString.substring(startSliceIndex, endSliceIndex);
 alert(`Результат: ${userString}`);
 */
 
-/* Задание №6 */
+/* Задание №6 
 let userText = prompt("Введите текст").trim();
 let wordFromText = prompt("Введите слово из текста").trim();
 let indexOfWord = userText.indexOf(wordFromText);
@@ -48,3 +48,21 @@ let indexOfWord = userText.indexOf(wordFromText);
 userText = userText.substring(0, indexOfWord)
 
 alert(`Результат: ${userText}`);
+*/
+
+/* Задание №7
+let javaScriptDescription = "JavaScript - мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript. JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений.";
+let length = javaScriptDescription.length;
+let halfIndex = Math.floor(length / 2);
+let part = javaScriptDescription.substring(0, halfIndex);
+
+part = part.replaceAll("а", "А");
+part = part.replaceAll(" ", "");
+const finalString = part.repeat(3);
+
+const midIndexFinal = Math.floor(finalString.length / 2);
+const middleChar = finalString[midIndexFinal];
+console.log("Символ посередине:", middleChar);
+
+console.log(finalString);
+*/

@@ -1,4 +1,4 @@
-/* Задание №1 
+/* Задание №1 */
 const existedUserLogin = "the_best_user";
 const existedUserPassword = 12345678;
 
@@ -10,7 +10,7 @@ if (UserLogin === existedUserLogin && UserLogin === existedUserLogin){
 } else {
     alert(`Логин и(или) Пароль введены неверно!`)
 }
-*/
+
 
 /* Задание №2 
 const answer1 = 4;
@@ -97,9 +97,44 @@ do {
 
 */
 
-/* Задание №5 */
+/* Задание №5 
 let sum = 0;
 for (let i = 1; i <= 100; i++) {
     sum += i;
 }
 alert(sum);
+*/
+
+/* Задание №6, 7 
+let clientName = "Игорь";
+let clientSpentForAllTime = 110;
+let clientSpentToday = 25;
+let discount = 0;
+*/
+/*
+let clientName = prompt("Введите имя клиента");
+let clientSpentForAllTime = Number(prompt("Сколько клиент потратил за всё время?"));
+let clientSpentToday = Number(prompt("Сколько клиент потратил сегодня?"));
+
+if (isNaN(clientSpentToday) && isNaN(clientSpentForAllTime)) {
+    alert("Сумма, которую клиент потратил за все время и которую потратил сегодня, должна быть числом! Перезагрузите страницу, чтобы повторить попытку.");
+} else {
+    let discount = 0;
+
+    if (clientSpentForAllTime >= 100 && clientSpentForAllTime < 300){
+        discount = 10;
+        }
+        else if (clientSpentForAllTime >= 300 && clientSpentForAllTime < 500){
+            discount = 20;
+        }
+        else if (clientSpentForAllTime >= 500){
+        discount = 30;
+    }
+
+    alert(`Вам предоставляется скидка в ${discount}%!`);
+    const todayWithDiscount = clientSpentToday * (1 - discount / 100);
+    clientSpentForAllTime += todayWithDiscount;
+
+    alert(`Спасибо, ${clientName}! К оплате ${todayWithDiscount}$. За все время в нашем ресторане вы потратили ${clientSpentForAllTime}$.`);
+}
+*/
