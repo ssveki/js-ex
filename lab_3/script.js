@@ -3,6 +3,9 @@ const getName1 = (name) =>{
     return(`Имя равно ${name}`);
 }
 
+
+()=> console.log('test')
+
 const getName2 = function(name) {
     return(`Имя равно ${name}`);
 }
