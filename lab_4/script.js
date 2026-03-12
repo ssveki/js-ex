@@ -39,6 +39,7 @@ function getSumOfSequence(number) {
 
 console.log(getSumOfSequence(10));
 */
+
 /* Задание №3 
 
 const coffees = ['Latte', 'Cappuccino', 'Americano'];
@@ -55,6 +56,7 @@ if (index !== -1) {
     alert("К сожалению, такого вида кофе нет в наличии");
 }
 */
+
 /* Задание №4
 
 const coffees = ['Latte', 'Cappuccino', 'Americano'];
@@ -88,6 +90,7 @@ const notGoodEstimations = clientsEstimations.filter(estimation => estimation <=
 
 alert(`Всего положительных оценок: ${goodEstimations}; Всего отрицательных оценок: ${notGoodEstimations}`);
 */
+
 /* Задание №6 
 
 const numbers = [10, 4, 100, -5, 54, 2];
@@ -117,3 +120,50 @@ console.log('forEach:', sumForEach);
 const sumReduce = numbers.reduce((sum, number) => sum + number ** 3, 0); // сворачивает массив в одно значение, применяя функцию к каждому элементу
 console.log('reduce:', sumReduce); 
 */
+
+/* Задание №7 */
+
+const goals = [8, 1, 1, 3, 2, -1, 5];
+
+// 1 самый результативный матч
+let maxGoals = goals[0];
+let maxIndex = 0;
+for (let i = 1; i < goals.length; i++) {
+    if (goals[i] > maxGoals) {
+        maxGoals = goals[i];
+        maxIndex = i;
+    }
+}
+alert(`Самый результативный матч был под номером ${maxIndex + 1}. В нем было забито ${maxGoals} гол(ов).`);
+
+// 2 самые нерезультативные игры
+const validGoals = goals.filter(goal => goal >= 0);
+const minGoals = Math.min(...validGoals);
+const minIndexes = [];
+for (let i = 0; i < goals.length; i++) {
+    if (goals[i] === minGoals) {
+        minIndexes.push(i + 1);
+    }
+}
+alert(`Самые нерезультативные матчи были под номерами ${minIndexes.join(', ')}. В каждом из них было забито по ${minGoals} мячу(а).`);
+
+// 3 общее количество голов за сезон
+const totalGoals = validGoals.reduce((sum, goal) => sum + goal, 0);
+alert(`Общее количество голов за сезон равно ${totalGoals}`);
+
+// 4 были ли автоматические поражения
+const hasAutoDefeats = goals.some(goal => goal < 0);
+alert(`Были автоматические поражения: ${hasAutoDefeats ? 'да' : 'нет'}`);
+
+// 5 среднее количество голов за матч
+const averageGoals = Math.round(totalGoals / validGoals.length);
+alert(`Среднее количество голов за матч равно ${averageGoals}`);
+
+// 6 отсортированные голы
+const sortedGoals = [...goals].sort((a, b) => a - b);
+alert(sortedGoals.join(', '));
+
+
+
+
+
