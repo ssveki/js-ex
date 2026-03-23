@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Менеджер задач</h1>
+        <div class="task-counter">
+            Всего: <span id="total-count">0</span> |
+            Активных: <span id="active-count">0</span> |
+            Завершённых: <span id="completed-count">0</span>
+        </div>
+        <!-- Форма добавления/редактирования -->
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Название задачи" required>
+            <textarea id="task-desc" placeholder="Описание"></textarea>
+            <select id="task-priority">
+                <option value="low">Низкий</option>
+                <option value="medium" selected>Средний</option>
+                <option value="high">Высокий</option>
+            </select>
+            <button type="submit" id="submit-btn">Добавить</button>
+        </form>
+        <!-- Поиск задач -->
+        <div class="search-section">
+            <input type="search" id="task-search" placeholder="🔍 Поиск задач по названию...">
+        </div>
+        <!-- Фильтрация -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="active">Активные</button>
+            <button class="filter-btn" data-filter="completed">Завершённые</button>
+        </div>
+        <div class="sort-section">
+            <select id="sort-by">
+                <option value="date-desc">Новые сначала</option>
+                <option value="date-asc">Старые сначала</option>
+                <option value="priority-high">Приоритет (высокий → низкий)</option>
+                <option value="priority-low">Приоритет (низкий → высокий)</option>
+            </select>
+        </div>
+        <!-- Список задач -->
+        <div id="task-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
