@@ -88,10 +88,10 @@ function renderTasks() {
 				<p>${escapeHTML(task.description)}</p>
 				<div class="task-actions">
 					<button onclick="toggleComplete(${task.id})">
-						${task.completed ? '↩ Вернуть' : '✅ Выполнено'}
+						${task.completed ? 'Вернуть' : 'Выполнено'}
 					</button>
-					<button onclick="editTask(${task.id})">✏ Изменить</button>
-					<button onclick="deleteTask(${task.id})">🗑 Удалить</button>
+					<button onclick="editTask(${task.id})">Изменить</button>
+					<button onclick="deleteTask(${task.id})">Удалить</button>
 				</div>
 			`;
 
@@ -173,7 +173,7 @@ function editTask(id) {
 	prioSelect.value = task.priority;
 
 	editingTaskId = id;
-	submitBtn.textContent = '💾 Сохранить изменения';
+	submitBtn.textContent = 'Сохранить изменения';
 	form.scrollIntoView({ behavior: 'smooth' });
 }
 
