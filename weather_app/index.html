@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Основной контейнер приложения -->
+    <div class="app-container">
+        <!-- Шапка с поиском и геолокацией -->
+        <header class="weather-header">
+            <h1>Погодное приложение</h1>
+            
+            <!-- Блок поиска города -->
+            <div class="search-section">
+                <div class="search-box">
+                    <!-- Поле ввода города (поддержка русского и латиницы) -->
+                    <input type="text" id="city-input" placeholder="Введите город (например: Moscow, Лондон)" class="city-input">
+                    <!-- Кнопка поиска -->
+                    <button id="search-btn" class="btn btn-primary">Найти</button>
+                    <!-- Кнопка геолокации -->
+                    <button id="location-btn" class="btn btn-location">Моё местоположение</button>
+                </div>
+            </div>
+            
+            <!-- Блок избранных городов -->
+            <div class="favorites-section">
+                <h3>Избранные города (до 5)</h3>
+                <div id="favorites-list" class="favorites-list"></div>
+            </div>
+        </header>
+        
+        <!-- Основной контент -->
+        <main>
+            <!-- Индикатор загрузки (спиннер) -->
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+                <p>Загрузка данных...</p>
+            </div>
+            
+            <!-- Блок текущей погоды -->
+            <section id="current-weather" class="weather-card">
+                <div class="city-info">
+                    <h2 id="city-name">--</h2>
+                    <!-- Переключатель температуры °C/°F -->
+                    <div class="unit-toggle">
+                        <button id="unit-c" class="unit-btn active">°C</button>
+                        <button id="unit-f" class="unit-btn">°F</button>
+                    </div>
+                </div>
+                
+                <div class="weather-main">
+                    <!-- Иконка погоды -->
+                    <img id="weather-icon" src="" alt="Weather icon" class="weather-icon">
+                    <!-- Температура -->
+                    <div class="temperature">
+                        <span id="temp">--</span>
+                        <span id="temp-unit">°C</span>
+                    </div>
+                </div>
+                
+                <div class="weather-description">
+                    <p id="description">--</p>
+                    <p id="feels-like">Ощущается как: --</p>
+                </div>
+                
+                <!-- Детальная информация о погоде -->
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Влажность</span>
+                        <span id="humidity" class="detail-value">--</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Ветер</span>
+                        <span id="wind" class="detail-value">--</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Давление</span>
+                        <span id="pressure" class="detail-value">--</span>
+                    </div>
+                </div>
+                
+                <!-- Кнопка добавления в избранное -->
+                <button id="add-favorite" class="btn-favorite">Добавить в избранное</button>
+            </section>
+            
+            <!-- Блок прогноза на 5 дней -->
+            <section class="forecast-section">
+                <h3>Прогноз на 5 дней</h3>
+                <div id="forecast-container" class="forecast-container"></div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Подключение JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
